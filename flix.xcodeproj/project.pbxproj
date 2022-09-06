@@ -14,6 +14,7 @@
 		913AE74C28C75AD900A55FDC /* FlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE74B28C75AD900A55FDC /* FlixTests.swift */; };
 		913AE75628C75AD900A55FDC /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75528C75AD900A55FDC /* FlixUITests.swift */; };
 		913AE75828C75AD900A55FDC /* FlixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75728C75AD900A55FDC /* FlixUITestsLaunchTests.swift */; };
+		913AE76728C7621200A55FDC /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 913AE76628C7621200A55FDC /* SwiftyBeaver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913AE76728C7621200A55FDC /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = Flix;
+			packageProductDependencies = (
+				913AE76628C7621200A55FDC /* SwiftyBeaver */,
+			);
 			productName = flix;
 			productReference = 913AE73728C75AD800A55FDC /* Flix.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 913AE72E28C75AD800A55FDC;
+			packageReferences = (
+				913AE76528C7621200A55FDC /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+			);
 			productRefGroup = 913AE73828C75AD800A55FDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -605,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		913AE76528C7621200A55FDC /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		913AE76628C7621200A55FDC /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 913AE76528C7621200A55FDC /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 913AE72F28C75AD800A55FDC /* Project object */;
 }
