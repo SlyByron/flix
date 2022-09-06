@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		913AE73B28C75AD800A55FDC /* flixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE73A28C75AD800A55FDC /* flixApp.swift */; };
+		913AE73B28C75AD800A55FDC /* FlixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE73A28C75AD800A55FDC /* FlixApp.swift */; };
 		913AE73D28C75AD800A55FDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE73C28C75AD800A55FDC /* ContentView.swift */; };
 		913AE73F28C75AD900A55FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913AE73E28C75AD900A55FDC /* Assets.xcassets */; };
 		913AE74228C75AD900A55FDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913AE74128C75AD900A55FDC /* Preview Assets.xcassets */; };
-		913AE74C28C75AD900A55FDC /* flixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE74B28C75AD900A55FDC /* flixTests.swift */; };
-		913AE75628C75AD900A55FDC /* flixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75528C75AD900A55FDC /* flixUITests.swift */; };
-		913AE75828C75AD900A55FDC /* flixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75728C75AD900A55FDC /* flixUITestsLaunchTests.swift */; };
+		913AE74C28C75AD900A55FDC /* FlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE74B28C75AD900A55FDC /* FlixTests.swift */; };
+		913AE75628C75AD900A55FDC /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75528C75AD900A55FDC /* FlixUITests.swift */; };
+		913AE75828C75AD900A55FDC /* FlixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75728C75AD900A55FDC /* FlixUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,16 +34,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		913AE73728C75AD800A55FDC /* flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		913AE73A28C75AD800A55FDC /* flixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flixApp.swift; sourceTree = "<group>"; };
+		913AE73728C75AD800A55FDC /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		913AE73A28C75AD800A55FDC /* FlixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixApp.swift; sourceTree = "<group>"; };
 		913AE73C28C75AD800A55FDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		913AE73E28C75AD900A55FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		913AE74128C75AD900A55FDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		913AE74728C75AD900A55FDC /* flixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		913AE74B28C75AD900A55FDC /* flixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flixTests.swift; sourceTree = "<group>"; };
-		913AE75128C75AD900A55FDC /* flixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		913AE75528C75AD900A55FDC /* flixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flixUITests.swift; sourceTree = "<group>"; };
-		913AE75728C75AD900A55FDC /* flixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		913AE74728C75AD900A55FDC /* FlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		913AE74B28C75AD900A55FDC /* FlixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixTests.swift; sourceTree = "<group>"; };
+		913AE75128C75AD900A55FDC /* FlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		913AE75528C75AD900A55FDC /* FlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITests.swift; sourceTree = "<group>"; };
+		913AE75728C75AD900A55FDC /* FlixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +74,9 @@
 		913AE72E28C75AD800A55FDC = {
 			isa = PBXGroup;
 			children = (
-				913AE73928C75AD800A55FDC /* flix */,
-				913AE74A28C75AD900A55FDC /* flixTests */,
-				913AE75428C75AD900A55FDC /* flixUITests */,
+				913AE73928C75AD800A55FDC /* Flix */,
+				913AE74A28C75AD900A55FDC /* FlixTests */,
+				913AE75428C75AD900A55FDC /* FlixUITests */,
 				913AE73828C75AD800A55FDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,22 +84,22 @@
 		913AE73828C75AD800A55FDC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				913AE73728C75AD800A55FDC /* flix.app */,
-				913AE74728C75AD900A55FDC /* flixTests.xctest */,
-				913AE75128C75AD900A55FDC /* flixUITests.xctest */,
+				913AE73728C75AD800A55FDC /* Flix.app */,
+				913AE74728C75AD900A55FDC /* FlixTests.xctest */,
+				913AE75128C75AD900A55FDC /* FlixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		913AE73928C75AD800A55FDC /* flix */ = {
+		913AE73928C75AD800A55FDC /* Flix */ = {
 			isa = PBXGroup;
 			children = (
-				913AE73A28C75AD800A55FDC /* flixApp.swift */,
+				913AE73A28C75AD800A55FDC /* FlixApp.swift */,
 				913AE73C28C75AD800A55FDC /* ContentView.swift */,
 				913AE73E28C75AD900A55FDC /* Assets.xcassets */,
 				913AE74028C75AD900A55FDC /* Preview Content */,
 			);
-			path = flix;
+			path = Flix;
 			sourceTree = "<group>";
 		};
 		913AE74028C75AD900A55FDC /* Preview Content */ = {
@@ -110,46 +110,47 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		913AE74A28C75AD900A55FDC /* flixTests */ = {
+		913AE74A28C75AD900A55FDC /* FlixTests */ = {
 			isa = PBXGroup;
 			children = (
-				913AE74B28C75AD900A55FDC /* flixTests.swift */,
+				913AE74B28C75AD900A55FDC /* FlixTests.swift */,
 			);
-			path = flixTests;
+			path = FlixTests;
 			sourceTree = "<group>";
 		};
-		913AE75428C75AD900A55FDC /* flixUITests */ = {
+		913AE75428C75AD900A55FDC /* FlixUITests */ = {
 			isa = PBXGroup;
 			children = (
-				913AE75528C75AD900A55FDC /* flixUITests.swift */,
-				913AE75728C75AD900A55FDC /* flixUITestsLaunchTests.swift */,
+				913AE75528C75AD900A55FDC /* FlixUITests.swift */,
+				913AE75728C75AD900A55FDC /* FlixUITestsLaunchTests.swift */,
 			);
-			path = flixUITests;
+			path = FlixUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		913AE73628C75AD800A55FDC /* flix */ = {
+		913AE73628C75AD800A55FDC /* Flix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 913AE75B28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "flix" */;
+			buildConfigurationList = 913AE75B28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "Flix" */;
 			buildPhases = (
 				913AE73328C75AD800A55FDC /* Sources */,
 				913AE73428C75AD800A55FDC /* Frameworks */,
 				913AE73528C75AD800A55FDC /* Resources */,
+				913AE76428C75BB300A55FDC /* Swift Lint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = flix;
+			name = Flix;
 			productName = flix;
-			productReference = 913AE73728C75AD800A55FDC /* flix.app */;
+			productReference = 913AE73728C75AD800A55FDC /* Flix.app */;
 			productType = "com.apple.product-type.application";
 		};
-		913AE74628C75AD900A55FDC /* flixTests */ = {
+		913AE74628C75AD900A55FDC /* FlixTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 913AE75E28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "flixTests" */;
+			buildConfigurationList = 913AE75E28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "FlixTests" */;
 			buildPhases = (
 				913AE74328C75AD900A55FDC /* Sources */,
 				913AE74428C75AD900A55FDC /* Frameworks */,
@@ -160,14 +161,14 @@
 			dependencies = (
 				913AE74928C75AD900A55FDC /* PBXTargetDependency */,
 			);
-			name = flixTests;
+			name = FlixTests;
 			productName = flixTests;
-			productReference = 913AE74728C75AD900A55FDC /* flixTests.xctest */;
+			productReference = 913AE74728C75AD900A55FDC /* FlixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		913AE75028C75AD900A55FDC /* flixUITests */ = {
+		913AE75028C75AD900A55FDC /* FlixUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 913AE76128C75AD900A55FDC /* Build configuration list for PBXNativeTarget "flixUITests" */;
+			buildConfigurationList = 913AE76128C75AD900A55FDC /* Build configuration list for PBXNativeTarget "FlixUITests" */;
 			buildPhases = (
 				913AE74D28C75AD900A55FDC /* Sources */,
 				913AE74E28C75AD900A55FDC /* Frameworks */,
@@ -178,9 +179,9 @@
 			dependencies = (
 				913AE75328C75AD900A55FDC /* PBXTargetDependency */,
 			);
-			name = flixUITests;
+			name = FlixUITests;
 			productName = flixUITests;
-			productReference = 913AE75128C75AD900A55FDC /* flixUITests.xctest */;
+			productReference = 913AE75128C75AD900A55FDC /* FlixUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 913AE73228C75AD800A55FDC /* Build configuration list for PBXProject "flix" */;
+			buildConfigurationList = 913AE73228C75AD800A55FDC /* Build configuration list for PBXProject "Flix" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				913AE73628C75AD800A55FDC /* flix */,
-				913AE74628C75AD900A55FDC /* flixTests */,
-				913AE75028C75AD900A55FDC /* flixUITests */,
+				913AE73628C75AD800A55FDC /* Flix */,
+				913AE74628C75AD900A55FDC /* FlixTests */,
+				913AE75028C75AD900A55FDC /* FlixUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,13 +253,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		913AE76428C75BB300A55FDC /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		913AE73328C75AD800A55FDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				913AE73D28C75AD800A55FDC /* ContentView.swift in Sources */,
-				913AE73B28C75AD800A55FDC /* flixApp.swift in Sources */,
+				913AE73B28C75AD800A55FDC /* FlixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913AE74C28C75AD900A55FDC /* flixTests.swift in Sources */,
+				913AE74C28C75AD900A55FDC /* FlixTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913AE75628C75AD900A55FDC /* flixUITests.swift in Sources */,
-				913AE75828C75AD900A55FDC /* flixUITestsLaunchTests.swift in Sources */,
+				913AE75628C75AD900A55FDC /* FlixUITests.swift in Sources */,
+				913AE75828C75AD900A55FDC /* FlixUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,12 +306,12 @@
 /* Begin PBXTargetDependency section */
 		913AE74928C75AD900A55FDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 913AE73628C75AD800A55FDC /* flix */;
+			target = 913AE73628C75AD800A55FDC /* Flix */;
 			targetProxy = 913AE74828C75AD900A55FDC /* PBXContainerItemProxy */;
 		};
 		913AE75328C75AD900A55FDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 913AE73628C75AD800A55FDC /* flix */;
+			target = 913AE73628C75AD800A55FDC /* Flix */;
 			targetProxy = 913AE75228C75AD900A55FDC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -483,7 +505,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flix.app/flix";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flix.app/Flix";
 			};
 			name = Debug;
 		};
@@ -503,7 +525,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flix.app/flix";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flix.app/Flix";
 			};
 			name = Release;
 		};
@@ -546,7 +568,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		913AE73228C75AD800A55FDC /* Build configuration list for PBXProject "flix" */ = {
+		913AE73228C75AD800A55FDC /* Build configuration list for PBXProject "Flix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913AE75928C75AD900A55FDC /* Debug */,
@@ -555,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		913AE75B28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "flix" */ = {
+		913AE75B28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "Flix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913AE75C28C75AD900A55FDC /* Debug */,
@@ -564,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		913AE75E28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "flixTests" */ = {
+		913AE75E28C75AD900A55FDC /* Build configuration list for PBXNativeTarget "FlixTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913AE75F28C75AD900A55FDC /* Debug */,
@@ -573,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		913AE76128C75AD900A55FDC /* Build configuration list for PBXNativeTarget "flixUITests" */ = {
+		913AE76128C75AD900A55FDC /* Build configuration list for PBXNativeTarget "FlixUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913AE76228C75AD900A55FDC /* Debug */,
