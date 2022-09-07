@@ -14,6 +14,8 @@ extension URL {
   }
 }
 
+/// Handles requests to The Movie Database API
+/// https://developers.themoviedb.org/3/
 final actor TheMovieDbAPI {
 
   private var apiKey: String
@@ -21,10 +23,15 @@ final actor TheMovieDbAPI {
   private let urlSession = URLSession.shared
   private let decoder = JSONDecoder()
 
+  /// Instantiates this class with an api key, that is provided specifically for a particular app
+  /// - Parameter apiKey: The app specific api key for The Movie Database
   init(apiKey: String) {
     self.apiKey = apiKey
   }
 
+  /// Generic request to the api, passing in the desired endpoint of the request
+  /// - Parameter endpoint: the URL specific to the desired API call
+  /// - Returns: A decoded object of the given type for this request
   func get<T: Decodable>(endpoint: URL) async throws -> T {
 
     // build url
@@ -75,6 +82,7 @@ final actor TheMovieDbAPI {
 
 // MARK: Errors
 
+/// Errors specific to communication with the Movie Database API
 public enum TheMovieDbError: Error {
   case malformed
   case request(Error)
@@ -85,6 +93,8 @@ public enum TheMovieDbError: Error {
 }
 
 extension TheMovieDbError: LocalizedError {
+
+  /// A description for what the error relates to
   public var errorDescription: String? {
     switch self {
     case .malformed:
