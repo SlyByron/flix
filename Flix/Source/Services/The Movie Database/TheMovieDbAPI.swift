@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 extension URL {
   static var theMovieDbBaseURL: URL {
@@ -19,14 +18,23 @@ extension URL {
 final actor TheMovieDbAPI {
 
   private var apiKey: String
-  private let baseURL = URL.theMovieDbBaseURL
-  private let urlSession = URLSession.shared
+  private let baseURL: URL
+  private let urlSession: URLSession
   private let decoder = JSONDecoder()
 
   /// Instantiates this class with an api key, that is provided specifically for a particular app
-  /// - Parameter apiKey: The app specific api key for The Movie Database
-  init(apiKey: String) {
+  /// - Parameters:
+  ///   - apiKey: The app specific api key for The Movie Database
+  ///   - baseURL: The URL that is prefixed to all API requests
+  ///   - urlSession: The URL session that will perform the network requests
+  init(
+    apiKey: String,
+    baseURL: URL = URL.theMovieDbBaseURL,
+    urlSession: URLSession = URLSession.shared
+  ) {
     self.apiKey = apiKey
+    self.baseURL = baseURL
+    self.urlSession = urlSession
   }
 
   /// Generic request to the api, passing in the desired endpoint of the request
@@ -34,19 +42,8 @@ final actor TheMovieDbAPI {
   /// - Returns: A decoded object of the given type for this request
   func get<T: Decodable>(endpoint: URL) async throws -> T {
 
-    // build url
-    let url = baseURL.appendingPathComponent(endpoint.path)
-    var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-    var queryItems = components?.queryItems ?? []
-    queryItems.append(URLQueryItem(name: "api_key", value: apiKey))
-    components?.queryItems = queryItems
-
-    guard let components = components, let requestURL = components.url else {
-      throw TheMovieDbError.malformed
-    }
-
-    // make request
-    let request = URLRequest(url: requestURL)
+    // construct request
+    let request = try buildURLRequest(for: endpoint)
     let data: Data
     let response: URLResponse
 
@@ -57,6 +54,26 @@ final actor TheMovieDbAPI {
     }
 
     // validate response
+    try validate(response: response)
+
+    // decode response data
+    return try await decode(responseData: data)
+  }
+
+  private func buildURLRequest(for endpoint: URL) throws -> URLRequest {
+    let url = baseURL.appendingPathComponent(endpoint.path)
+    var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+    var queryItems = components?.queryItems ?? []
+    queryItems.append(URLQueryItem(name: "api_key", value: apiKey))
+    components?.queryItems = queryItems
+
+    guard let components = components, let requestURL = components.url else {
+      throw TheMovieDbError.malformed
+    }
+    return URLRequest(url: requestURL)
+  }
+
+  private func validate(response: URLResponse) throws {
     let status = (response as? HTTPURLResponse)?.statusCode ?? -1
     if status != 200 { // handle response errors
       switch status {
@@ -68,13 +85,14 @@ final actor TheMovieDbAPI {
         throw TheMovieDbError.unknown
       }
     }
+  }
 
-    // decode response data
+  private func decode<T: Decodable>(responseData: Data) async throws -> T {
     let result: T
     do {
-      result = try decoder.decode(T.self, from: data)
+      result = try decoder.decode(T.self, from: responseData)
     } catch {
-      throw TheMovieDbError.decode
+      throw TheMovieDbError.parsing
     }
     return result
   }
@@ -85,10 +103,10 @@ final actor TheMovieDbAPI {
 /// Errors specific to communication with the Movie Database API
 public enum TheMovieDbError: Error {
   case malformed
-  case request(Error)
+  case network(Error)
   case unauthorized
   case notFound
-  case decode
+  case parsing
   case unknown
 }
 
@@ -99,14 +117,14 @@ extension TheMovieDbError: LocalizedError {
     switch self {
     case .malformed:
       return "malformed request"
-    case .request(let error):
-      return "error making request: \(error.localizedDescription)"
+    case .network(let error):
+      return "network error: \(error.localizedDescription)"
     case .unauthorized:
       return "error authorising request"
     case .notFound:
       return "nothing found for request"
-    case .decode:
-      return "error decoding response data"
+    case .parsing:
+      return "error parsing response data"
     case .unknown:
       return "unknown error occured"
     }
