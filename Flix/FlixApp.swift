@@ -14,6 +14,8 @@ let log = SwiftyBeaver.self
 @main
 struct FlixApp: App {
 
+  @StateObject private var viewModelFactory = ViewModelFactory()
+
   init() {
     configureLogging()
     log.info("Hello World")
@@ -39,7 +41,7 @@ struct FlixApp: App {
 
   var body: some Scene {
     WindowGroup {
-      MovieListView(viewModel: MovieListViewModel())
+      MovieListView(viewModel: viewModelFactory.makeMovieListViewModel())
     }
   }
 }

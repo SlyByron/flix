@@ -9,7 +9,7 @@ import Foundation
 
 /// The view model backing the movie list
 class MovieListViewModel: ObservableObject {
-  
+
   @Published private(set) var movies: [Movie]
 
   init() {
