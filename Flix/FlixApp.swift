@@ -39,7 +39,7 @@ struct FlixApp: App {
 
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      MovieListView(viewModel: MovieListViewModel())
     }
   }
 }
