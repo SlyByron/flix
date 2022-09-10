@@ -20,10 +20,15 @@ class MovieListViewModel: ObservableObject {
   private var nextPage = 1
   var fetchingMovies = false
 
+  /// Create a view model with the logic to provide a list of movies, with pagination.
+  /// - Parameters:
+  ///   - movieRepository: repository to get movie information
+  ///   - type: the type of movie list
   init(movieRepository: MovieRepository) {
     self.movieRepository = movieRepository
   }
 
+  /// fetch the next page of movies
   func fetchMovies() async {
     if availableMovies {
       fetchingMovies = true
