@@ -1,5 +1,5 @@
 //
-//  TheMovieDbAPITests.swift
+//  TheMovieDbServiceTests.swift
 //  FlixTests
 //
 //  Created by Byron on 07/09/2022.
@@ -8,10 +8,10 @@
 import XCTest
 @testable import Flix
 
-class TheMovieDbAPITests: XCTestCase {
+class TheMovieDbServiceTests: XCTestCase {
 
   let testAPIURL = URL(string: "https://url.test")!
-  var testDBAPI: TheMovieDbAPI!
+  var testDBService: TheMovieDbService!
 
   override func setUpWithError() throws {
 
@@ -19,7 +19,7 @@ class TheMovieDbAPITests: XCTestCase {
     config.protocolClasses = [MockURLProtocol.self]
     let session = URLSession(configuration: config)
 
-    testDBAPI = TheMovieDbAPI(
+    testDBService = TheMovieDbService(
       apiKey: "testKEY",
       baseURL: testAPIURL,
       urlSession: session
@@ -40,7 +40,7 @@ class TheMovieDbAPITests: XCTestCase {
     }
 
     let testEndpoint = URL(string: "test/endpoint")!
-    let result: TestResponseData = try await testDBAPI.get(endpoint: testEndpoint)
+    let result: TestResponseData = try await testDBService.get(endpoint: testEndpoint)
     XCTAssertEqual(result.testString, "success")
     XCTAssertEqual(result.testInt, 12)
   }
@@ -59,7 +59,7 @@ class TheMovieDbAPITests: XCTestCase {
 
     let testEndpoint = URL(string: "test/endpoint/////")!
     do {
-      let _: TestResponseData = try await testDBAPI.get(endpoint: testEndpoint)
+      let _: TestResponseData = try await testDBService.get(endpoint: testEndpoint)
     } catch {
       if let error = error as? TheMovieDbError {
         XCTAssertEqual(error.errorDescription, TheMovieDbError.unauthorized.errorDescription)

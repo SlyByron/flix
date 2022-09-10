@@ -10,13 +10,20 @@ import Foundation
 /// The view model backing the movie list
 class MovieListViewModel: ObservableObject {
 
-  @Published private(set) var movies: [Movie]
+  var movieRepository: MovieRepository
 
-  init() {
-    movies = [
-      Movie(title: "Lord of the Rings"),
-      Movie(title: "Matrix"),
-      Movie(title: "Shrek")
-    ]
+  @Published private(set) var movies: [Movie] = []
+
+  init(movieRepository: MovieRepository) {
+    self.movieRepository = movieRepository
+  }
+
+  func fetchMovies() async {
+    do {
+      let paginatedMovies: MoviePaginatedList = try await movieRepository.popular()
+      movies = paginatedMovies.results
+    } catch {
+      log.error("Error fetching movie data from repository: \(error)")
+    }
   }
 }

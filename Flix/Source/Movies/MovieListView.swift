@@ -23,11 +23,9 @@ struct MovieListView: View {
       .listStyle(.plain)
       .navigationBarTitle("Movies")
     }
-  }
-}
-
-struct MovieListView_Previews: PreviewProvider {
-  static var previews: some View {
-    MovieListView(viewModel: MovieListViewModel())
+    .task {
+      // get all movies to display in the list
+      await viewModel.fetchMovies()
+    }
   }
 }

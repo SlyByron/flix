@@ -1,5 +1,5 @@
 //
-//  TheMovieDbAPI.swift
+//  TheMovieDbService.swift
 //  Flix
 //
 //  Created by Byron on 07/09/2022.
@@ -15,7 +15,7 @@ extension URL {
 
 /// Handles requests to The Movie Database API
 /// https://developers.themoviedb.org/3/
-final actor TheMovieDbAPI {
+final actor TheMovieDbService {
 
   private var apiKey: String
   private let baseURL: URL
@@ -64,7 +64,10 @@ final actor TheMovieDbAPI {
     let url = baseURL.appendingPathComponent(endpoint.path)
     var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
     var queryItems = components?.queryItems ?? []
+    // add api key
     queryItems.append(URLQueryItem(name: "api_key", value: apiKey))
+    // add current language code
+    queryItems.append(URLQueryItem(name: "language", value: Locale.current.languageCode))
     components?.queryItems = queryItems
 
     guard let components = components, let requestURL = components.url else {
