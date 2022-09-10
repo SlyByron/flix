@@ -14,7 +14,7 @@ class ViewModelFactory: ObservableObject {
 
   func makeMovieListViewModel() -> MovieListViewModel {
     return MovieListViewModel(
-      movieRepository: MovieRepository(theMovieDbService: movieDBService)
+      movieRepository: MovieRepository(service: movieDBService)
     )
   }
 }

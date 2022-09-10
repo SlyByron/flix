@@ -15,7 +15,7 @@ extension URL {
 
 /// Handles requests to The Movie Database API
 /// https://developers.themoviedb.org/3/
-final actor TheMovieDbService {
+final actor TheMovieDbService: RESTService {
 
   private var apiKey: String
   private let baseURL: URL
@@ -37,32 +37,13 @@ final actor TheMovieDbService {
     self.urlSession = urlSession
   }
 
-  /// Generic request to the api, passing in the desired endpoint of the request
-  /// - Parameter endpoint: the URL specific to the desired API call
-  /// - Returns: A decoded object of the given type for this request
-  func get<T: Decodable>(endpoint: URL) async throws -> T {
-
-    // construct request
-    let request = try buildURLRequest(for: endpoint)
-    let data: Data
-    let response: URLResponse
-
-    do {
-      (data, response) = try await urlSession.data(for: request)
-    } catch {
-      throw error
-    }
-
-    // validate response
-    try validate(response: response)
-
-    // decode response data
-    return try await decode(responseData: data)
-  }
-
-  private func buildURLRequest(for endpoint: URL) throws -> URLRequest {
-    let url = baseURL.appendingPathComponent(endpoint.path)
-    var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+  private func buildURLRequest(for endpoint: Endpoint) throws -> URLRequest {
+//    let url = baseURL.appendingPathComponent(endpoint.url.path)
+    var components = URLComponents(url: endpoint.url, resolvingAgainstBaseURL: true)
+    components?.scheme = baseURL.scheme
+    components?.host = baseURL.host
+    let path = "\(baseURL.path)\(components?.path ?? "")"
+    components?.path = path
     var queryItems = components?.queryItems ?? []
     // add api key
     queryItems.append(URLQueryItem(name: "api_key", value: apiKey))
@@ -98,6 +79,28 @@ final actor TheMovieDbService {
       throw TheMovieDbError.parsing
     }
     return result
+  }
+
+  // MARK: GET
+
+  func get<T: Decodable>(endpoint: Endpoint) async throws -> T {
+
+    // construct request
+    let request = try buildURLRequest(for: endpoint)
+    let data: Data
+    let response: URLResponse
+
+    do {
+      (data, response) = try await urlSession.data(for: request)
+    } catch {
+      throw error
+    }
+
+    // validate response
+    try validate(response: response)
+
+    // decode response data
+    return try await decode(responseData: data)
   }
 }
 
