@@ -17,7 +17,19 @@ struct MovieListView: View {
     NavigationView {
       List {
         ForEach(viewModel.movies) { movie in
-          Text(movie.title)
+          VStack {
+            Text(movie.title)
+          }.onAppear {
+            viewModel.paginationUpdate(movie: movie)
+          }
+        }
+        // show spinner when needed
+        if viewModel.fetchingMovies {
+          HStack(alignment: .center) {
+            Spacer()
+            ProgressView().progressViewStyle(.circular)
+            Spacer()
+          }
         }
       }
       .listStyle(.plain)

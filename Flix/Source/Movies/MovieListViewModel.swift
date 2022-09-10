@@ -10,20 +10,50 @@ import Foundation
 /// The view model backing the movie list
 class MovieListViewModel: ObservableObject {
 
+  /// The repository for fetching movies
   var movieRepository: MovieRepository
-
   @Published private(set) var movies: [Movie] = []
+
+  /// whether there are more movies available to fetch
+  var availableMovies = true
+
+  private var nextPage = 1
+  var fetchingMovies = false
 
   init(movieRepository: MovieRepository) {
     self.movieRepository = movieRepository
   }
 
   func fetchMovies() async {
-    do {
-      let paginatedMovies: MoviePaginatedList = try await movieRepository.popular()
-      movies = paginatedMovies.results
-    } catch {
-      log.error("Error fetching movie data from repository: \(error)")
+    if availableMovies {
+      fetchingMovies = true
+      do {
+        let paginatedMovies: MoviePaginatedList = try await movieRepository.popular(page: nextPage)
+        nextPage = paginatedMovies.page + 1
+        availableMovies = nextPage <= paginatedMovies.totalPages
+        DispatchQueue.main.async {
+          self.movies.append(contentsOf: paginatedMovies.results)
+        }
+        fetchingMovies = false
+      } catch {
+        log.error("Error fetching movie data from repository: \(error)")
+        fetchingMovies = false
+      }
+    }
+  }
+
+  // determine whether more movies should be fetched
+  // fetch more movies ahead of time before last movie is accessed
+  func paginationUpdate(movie: Movie) {
+    if !fetchingMovies {
+      guard movies.last == movie else {
+        log.verbose("pagination update - not last item")
+        return
+      }
+      log.info("pagination update - getting next page of movies")
+      Task {
+        await fetchMovies()
+      }
     }
   }
 }

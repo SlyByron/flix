@@ -8,7 +8,7 @@
 import Foundation
 
 /// Model object for a particular movie
-struct Movie: Decodable {
+struct Movie: Decodable, Equatable {
 
   /// The title of the movie
   var title: String
