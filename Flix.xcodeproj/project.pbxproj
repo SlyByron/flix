@@ -11,7 +11,6 @@
 		913AE73D28C75AD800A55FDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE73C28C75AD800A55FDC /* ContentView.swift */; };
 		913AE73F28C75AD900A55FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913AE73E28C75AD900A55FDC /* Assets.xcassets */; };
 		913AE74228C75AD900A55FDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913AE74128C75AD900A55FDC /* Preview Assets.xcassets */; };
-		913AE74C28C75AD900A55FDC /* FlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE74B28C75AD900A55FDC /* FlixTests.swift */; };
 		913AE75628C75AD900A55FDC /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75528C75AD900A55FDC /* FlixUITests.swift */; };
 		913AE75828C75AD900A55FDC /* FlixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75728C75AD900A55FDC /* FlixUITestsLaunchTests.swift */; };
 		913AE76728C7621200A55FDC /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 913AE76628C7621200A55FDC /* SwiftyBeaver */; };
@@ -54,7 +53,6 @@
 		913AE73E28C75AD900A55FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		913AE74128C75AD900A55FDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		913AE74728C75AD900A55FDC /* FlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		913AE74B28C75AD900A55FDC /* FlixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixTests.swift; sourceTree = "<group>"; };
 		913AE75128C75AD900A55FDC /* FlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913AE75528C75AD900A55FDC /* FlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITests.swift; sourceTree = "<group>"; };
 		913AE75728C75AD900A55FDC /* FlixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				914900D728C8F1360082B094 /* Services */,
-				913AE74B28C75AD900A55FDC /* FlixTests.swift */,
 			);
 			path = FlixTests;
 			sourceTree = "<group>";
@@ -419,7 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913AE74C28C75AD900A55FDC /* FlixTests.swift in Sources */,
 				914900D928C8F1570082B094 /* TheMovieDbServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

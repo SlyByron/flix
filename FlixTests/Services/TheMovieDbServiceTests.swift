@@ -8,6 +8,17 @@
 import XCTest
 @testable import Flix
 
+enum TestEndpoint: Endpoint {
+  case test
+
+  var url: URL {
+    switch self {
+    case .test:
+      return URL(string: "/test/endpoint")!
+    }
+  }
+}
+
 class TheMovieDbServiceTests: XCTestCase {
 
   let testAPIURL = URL(string: "https://url.test")!
@@ -39,8 +50,7 @@ class TheMovieDbServiceTests: XCTestCase {
       return (response, responseData)
     }
 
-    let testEndpoint = URL(string: "test/endpoint")!
-    let result: TestResponseData = try await testDBService.get(endpoint: testEndpoint)
+    let result: TestResponseData = try await testDBService.get(endpoint: TestEndpoint.test)
     XCTAssertEqual(result.testString, "success")
     XCTAssertEqual(result.testInt, 12)
   }
@@ -57,9 +67,8 @@ class TheMovieDbServiceTests: XCTestCase {
       return (response, responseData)
     }
 
-    let testEndpoint = URL(string: "test/endpoint/////")!
     do {
-      let _: TestResponseData = try await testDBService.get(endpoint: testEndpoint)
+      let _: TestResponseData = try await testDBService.get(endpoint: TestEndpoint.test)
     } catch {
       if let error = error as? TheMovieDbError {
         XCTAssertEqual(error.errorDescription, TheMovieDbError.unauthorized.errorDescription)
