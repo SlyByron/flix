@@ -18,7 +18,7 @@ struct MovieListView: View {
       List {
         ForEach(viewModel.movies) { movie in
           VStack {
-            Text(movie.title)
+            MovieCell(movie: movie)
           }.onAppear {
             viewModel.paginationUpdate(movie: movie)
           }
@@ -33,7 +33,7 @@ struct MovieListView: View {
         }
       }
       .listStyle(.plain)
-      .navigationBarTitle("Movies")
+      .navigationBarTitle("Popular")
     }
     .task {
       // get all movies to display in the list

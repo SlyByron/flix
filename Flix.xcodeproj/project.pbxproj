@@ -27,6 +27,7 @@
 		914900F128CC80D60082B094 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914900F028CC80D60082B094 /* Endpoint.swift */; };
 		914900F328CC811B0082B094 /* TheMovieDbEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914900F228CC811B0082B094 /* TheMovieDbEndpoints.swift */; };
 		914900F628CC85E10082B094 /* URL+Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914900F528CC85E10082B094 /* URL+Pagination.swift */; };
+		914900FE28CDC5030082B094 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914900FD28CDC5030082B094 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		914900F028CC80D60082B094 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		914900F228CC811B0082B094 /* TheMovieDbEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDbEndpoints.swift; sourceTree = "<group>"; };
 		914900F528CC85E10082B094 /* URL+Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Pagination.swift"; sourceTree = "<group>"; };
+		914900FD28CDC5030082B094 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			children = (
 				914900DB28C9E5770082B094 /* MovieListView.swift */,
 				914900DD28C9E5890082B094 /* MovieListViewModel.swift */,
+				914900FD28CDC5030082B094 /* MovieCell.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914900FE28CDC5030082B094 /* MovieCell.swift in Sources */,
 				914900E828CB88560082B094 /* PaginatedList.swift in Sources */,
 				914900E428CB84C90082B094 /* MovieRepository.swift in Sources */,
 				913AE73D28C75AD800A55FDC /* ContentView.swift in Sources */,

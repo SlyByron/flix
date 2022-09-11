@@ -38,7 +38,6 @@ final actor TheMovieDbService: RESTService {
   }
 
   private func buildURLRequest(for endpoint: Endpoint) throws -> URLRequest {
-//    let url = baseURL.appendingPathComponent(endpoint.url.path)
     var components = URLComponents(url: endpoint.url, resolvingAgainstBaseURL: true)
     components?.scheme = baseURL.scheme
     components?.host = baseURL.host
