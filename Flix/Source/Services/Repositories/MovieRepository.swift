@@ -31,4 +31,8 @@ class MovieRepository {
   func upcoming(page: Int = 1) async throws -> MoviePaginatedList {
     try await service.get(endpoint: MoviesEndpoint.upcoming(page: page))
   }
+
+  func details(id: Int) async throws -> Movie {
+    try await service.get(endpoint: MoviesEndpoint.details(id: id))
+  }
 }

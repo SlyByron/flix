@@ -10,6 +10,7 @@ import Foundation
 enum MoviesEndpoint {
   case popular(page: Int? = nil)
   case upcoming(page: Int? = nil)
+  case details(id: Int)
 }
 
 extension MoviesEndpoint: Endpoint {
@@ -26,6 +27,9 @@ extension MoviesEndpoint: Endpoint {
       return Self.basePath
         .appendingPathComponent("upcoming")
         .appendingPage(page)
+    case .details(let id):
+      return Self.basePath
+        .appendingPathComponent("\(id)")
     }
   }
 }

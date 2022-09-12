@@ -7,19 +7,25 @@
 
 import SwiftUI
 
-/// The view to be able to view a list of movies
+/// The view to be able to view a list of moviesd
 struct MovieListView: View {
 
   /// The view model backing this view
   @StateObject var viewModel: MovieListViewModel
+  @EnvironmentObject private var vmFactory: ViewModelFactory
 
   var body: some View {
     NavigationView {
       List {
         ForEach(viewModel.movies) { movie in
-          VStack {
-            MovieCell(movie: movie)
-          }.onAppear {
+          NavigationLink(
+            destination: MovieDetailsView(
+              viewModel: vmFactory.makeMovieDetailsViewModel(movie: movie)
+            )
+          ) {
+            MovieCellView(movie: movie)
+          }
+          .onAppear {
             viewModel.paginationUpdate(movie: movie)
           }
         }

@@ -1,5 +1,5 @@
 //
-//  MovieCell.swift
+//  MovieCellView.swift
 //  Flix
 //
 //  Created by Byron on 11/09/2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// View for displaying movie information in a list
-struct MovieCell: View {
+struct MovieCellView: View {
   let movie: Movie
   var body: some View {
     HStack(spacing: 20) {
@@ -41,13 +41,16 @@ struct MovieCell: View {
 
 struct MovieCell_Previews: PreviewProvider {
   static var previews: some View {
-    MovieCell(movie: Movie(
+    MovieCellView(movie: Movie(
       id: 1,
       title: "A delightful movie",
       releaseDate: "01/02/2022",
       poster: "",
       backdrop: "",
-      overview: "lots of info"
+      tagline: "best ever!",
+      overview: "lots of info",
+      runtime: 105
+//      genres: [Genre(id: 1, name: "horror")]
     ))
   }
 }

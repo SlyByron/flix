@@ -42,6 +42,7 @@ struct FlixApp: App {
   var body: some Scene {
     WindowGroup {
       MovieListView(viewModel: viewModelFactory.makeMovieListViewModel())
+        .environmentObject(viewModelFactory)
     }
   }
 }
