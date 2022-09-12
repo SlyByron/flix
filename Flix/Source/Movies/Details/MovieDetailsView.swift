@@ -23,8 +23,7 @@ struct MovieDetailsView: View {
       case .success(let image):
         image
           .resizable()
-          .frame(height: 400)
-          .aspectRatio(contentMode: .fill)
+          .scaledToFit()
       case .failure:
         Color.gray
       @unknown default:
