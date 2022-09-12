@@ -8,6 +8,7 @@
 import Foundation
 
 extension URL {
+  /// Base URL to The Movie Database API
   static var theMovieDbBaseURL: URL {
     URL(string: "https://api.themoviedb.org/3")!
   }
@@ -89,6 +90,7 @@ final actor TheMovieDbService: RESTService {
     let data: Data
     let response: URLResponse
 
+    log.info("GET request to The Movie Database: \(request)")
     do {
       (data, response) = try await urlSession.data(for: request)
     } catch {

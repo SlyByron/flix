@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// ViewModel for handling updating more details for a movie
 class MovieDetailsViewModel: ObservableObject {
 
   /// The repository for fetching movie details

@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// The endpoint for a specific API request
 protocol Endpoint {
+  /// the url representation of the endpoint
   var url: URL { get }
 }

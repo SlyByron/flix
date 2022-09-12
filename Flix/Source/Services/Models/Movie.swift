@@ -44,8 +44,10 @@ struct Movie: Decodable, Equatable, Identifiable {
 }
 
 extension Movie {
-  func formattedRuntime() -> String {
 
+  /// Runtime formatted into hours and minutes
+  /// - Returns: a string with the runtime formatted accordingly
+  func formattedRuntime() -> String {
     guard let runtime = runtime else {
       log.info("no runtime to format")
       return ""

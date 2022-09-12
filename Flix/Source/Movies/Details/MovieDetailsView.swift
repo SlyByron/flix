@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View for additional details about a Movie
 struct MovieDetailsView: View {
 
   /// The view model backing this view

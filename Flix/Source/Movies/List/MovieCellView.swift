@@ -50,7 +50,6 @@ struct MovieCell_Previews: PreviewProvider {
       tagline: "best ever!",
       overview: "lots of info",
       runtime: 105
-//      genres: [Genre(id: 1, name: "horror")]
     ))
   }
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Movie API Endpoints
 enum MoviesEndpoint {
   case popular(page: Int? = nil)
   case upcoming(page: Int? = nil)

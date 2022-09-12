@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		913AE73B28C75AD800A55FDC /* FlixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE73A28C75AD800A55FDC /* FlixApp.swift */; };
-		913AE73D28C75AD800A55FDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE73C28C75AD800A55FDC /* ContentView.swift */; };
 		913AE73F28C75AD900A55FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913AE73E28C75AD900A55FDC /* Assets.xcassets */; };
 		913AE74228C75AD900A55FDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913AE74128C75AD900A55FDC /* Preview Assets.xcassets */; };
 		913AE75628C75AD900A55FDC /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AE75528C75AD900A55FDC /* FlixUITests.swift */; };
@@ -51,7 +50,6 @@
 /* Begin PBXFileReference section */
 		913AE73728C75AD800A55FDC /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913AE73A28C75AD800A55FDC /* FlixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixApp.swift; sourceTree = "<group>"; };
-		913AE73C28C75AD800A55FDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		913AE73E28C75AD900A55FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		913AE74128C75AD900A55FDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		913AE74728C75AD900A55FDC /* FlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +161,6 @@
 				914900F428CC85C10082B094 /* Extensions */,
 				914900D128C896010082B094 /* Services */,
 				914900DA28C9E5270082B094 /* Movies */,
-				913AE73C28C75AD800A55FDC /* ContentView.swift */,
 				914900E128CB835B0082B094 /* ViewModelFactory.swift */,
 			);
 			path = Source;
@@ -420,7 +417,6 @@
 				914900FE28CDC5030082B094 /* MovieCellView.swift in Sources */,
 				914900E828CB88560082B094 /* PaginatedList.swift in Sources */,
 				914900E428CB84C90082B094 /* MovieRepository.swift in Sources */,
-				913AE73D28C75AD800A55FDC /* ContentView.swift in Sources */,
 				914900F328CC811B0082B094 /* TheMovieDbEndpoints.swift in Sources */,
 				914900DC28C9E5770082B094 /* MovieListView.swift in Sources */,
 				914900E028C9EB010082B094 /* Movie.swift in Sources */,
