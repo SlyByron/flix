@@ -18,7 +18,6 @@ struct FlixApp: App {
 
   init() {
     configureLogging()
-    log.info("Hello World")
   }
 
   private func configureLogging() {
