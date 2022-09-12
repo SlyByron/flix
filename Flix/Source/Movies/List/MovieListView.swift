@@ -41,6 +41,7 @@ struct MovieListView: View {
       .listStyle(.plain)
       .navigationBarTitle("Popular")
     }
+    .navigationViewStyle(.stack)
     .task {
       // get all movies to display in the list
       await viewModel.fetchMovies()
