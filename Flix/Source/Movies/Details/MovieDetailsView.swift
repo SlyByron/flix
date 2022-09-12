@@ -36,9 +36,10 @@ struct MovieDetailsView: View {
         VStack(alignment: .leading, spacing: 16.0) {
           Text(viewModel.movie.title)
             .font(.title)
+            .foregroundColor(.mainText)
           viewModel.movie.tagline.map(Text.init)
             .font(.headline)
-            .foregroundColor(.gray)
+            .foregroundColor(.secondaryText)
           Divider()
           VStack(alignment: .leading) {
             Text("Duration:")

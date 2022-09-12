@@ -41,6 +41,7 @@ struct FlixApp: App {
   var body: some Scene {
     WindowGroup {
       MovieListView(viewModel: viewModelFactory.makeMovieListViewModel())
+        .accentColor(.mainTint)
         .environmentObject(viewModelFactory)
     }
   }
