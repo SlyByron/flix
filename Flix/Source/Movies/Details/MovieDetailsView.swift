@@ -15,13 +15,21 @@ struct MovieDetailsView: View {
 
   var body: some View {
     // banner
-    AsyncImage(url: viewModel.movie.backdropURL()) { image in
-      image
-        .resizable()
-        .frame(height: 400)
-        .aspectRatio(contentMode: .fill)
-    } placeholder: {
-      Color.gray
+    AsyncImage(url: viewModel.movie.backdropURL()) { phase in
+      switch phase {
+      case .empty:
+        ProgressView()
+          .progressViewStyle(.circular)
+      case .success(let image):
+        image
+          .resizable()
+          .frame(height: 400)
+          .aspectRatio(contentMode: .fill)
+      case .failure:
+        Color.gray
+      @unknown default:
+        Color.red // more obvious a case is not handled
+      }
     }
     // main content
     ScrollView {
